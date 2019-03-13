@@ -1,79 +1,65 @@
 
-
-// display number
-document.getElementById("zero").onclick = function() {
-    if(document.getElementById("display_num").innerHTML.length<=10)
-        document.getElementById("display_num").innerHTML = document.getElementById("display_num").innerHTML*10 + 0;
+// numbers btn
+function getNum(num) {
+    $("#display_num").val(function(i,val){
+       return val + num;
+    });
 }
 
-document.getElementById("one").onclick = function() {
-    if(document.getElementById("display_num").innerHTML.length<=10)
-        document.getElementById("display_num").innerHTML = document.getElementById("display_num").innerHTML*10 + 1;
+// clear btn
+function clearRes() {
+    $("#display_num").val("");
 }
 
-document.getElementById("two").onclick = function() {
-    if(document.getElementById("display_num").innerHTML.length<=10)
-        document.getElementById("display_num").innerHTML = document.getElementById("display_num").innerHTML*10 + 2;
+// equal btn
+function equal() {
+    var boxRes = $("#display_num").val();
+    var lastSym = boxRes.substr(boxRes.length - 1); // get the last value of the string
+    
+    // if the last value of a maths formula is an operator , delete it
+    if(lastSym == "+" || lastSym == "-" || lastSym == "*" || lastSym == "/"|| lastSym == "."){
+        del();
+        $("#display_num").val(eval($("#display_num").val()));
+    }else{
+        $("#display_num").val(eval($("#display_num").val()));
+    }
 }
 
-document.getElementById("three").onclick = function() {
-    if(document.getElementById("display_num").innerHTML.length<=10)
-        document.getElementById("display_num").innerHTML = document.getElementById("display_num").innerHTML*10 + 3;
+// operator btn
+function cal(calSymbol) {
+    var boxRes = $("#display_num").val();
+    var lastSym = boxRes.substr(boxRes.length - 1); // get the last value of the string
+    
+    // need to press a number first before pressing operator
+    if($("#display_num").val()==""){
+        $("#display_num").val("");
+    // avoid duplicating the symbol operator together    
+    }else if(lastSym == "+" || lastSym == "-" || lastSym == "*" || lastSym == "/" || lastSym == "."){
+        $("#display_num").val();
+    }else{
+        $("#display_num").val(function(i,val){
+            return val + calSymbol;
+        });
+    }
 }
 
-document.getElementById("four").onclick = function() {
-    if(document.getElementById("display_num").innerHTML.length<=10)
-        document.getElementById("display_num").innerHTML = document.getElementById("display_num").innerHTML*10 + 4;
+// - btn  can use in a substraction function or put before a number to make it as a negative number, so separate it from cal()
+function minus(minuss) {
+    var boxRes = $("#display_num").val();
+    var lastSym = boxRes.substr(boxRes.length - 1); // get the last value of the string
+    // avoid duplicating the symbol +-*/. together 
+    if(lastSym == "+" || lastSym == "-" || lastSym == "*" || lastSym == "/" || lastSym == "."){
+        $("#display_num").val();
+    }else{
+        $("#display_num").val(function(i,val){
+            return val + minuss;
+        });
+    }
 }
 
-document.getElementById("five").onclick = function() {
-    if(document.getElementById("display_num").innerHTML.length<=10)
-        document.getElementById("display_num").innerHTML = document.getElementById("display_num").innerHTML*10 + 5;
+// del btn
+function del(){
+    $("#display_num").val(function(i, val){
+        return val.substr(0, val.length - 1); // get the first to the second last value of the string
+    });
 }
-
-document.getElementById("six").onclick = function() {
-    if(document.getElementById("display_num").innerHTML.length<=10)
-        document.getElementById("display_num").innerHTML = document.getElementById("display_num").innerHTML*10 + 6;
-}
-
-document.getElementById("seven").onclick = function() {
-    if(document.getElementById("display_num").innerHTML.length<=10)
-        document.getElementById("display_num").innerHTML = document.getElementById("display_num").innerHTML*10 + 7;
-}
-
-document.getElementById("eight").onclick = function() {
-    if(document.getElementById("display_num").innerHTML.length<=10)
-        document.getElementById("display_num").innerHTML = document.getElementById("display_num").innerHTML*10 + 8;
-}
-
-document.getElementById("nine").onclick = function() {
-    if(document.getElementById("display_num").innerHTML.length<=10)
-        document.getElementById("display_num").innerHTML = document.getElementById("display_num").innerHTML*10 + 9;
-}
-
-// document.getElementById("point").onclick = function() {
-//     if(document.getElementById("display_num").innerHTML.length<=10)
-//         document.getElementById("display_num").innerHTML = document.getElementById("display_num").innerHTML + '.';
-// }
-
-
-// clean
-document.getElementById("clean_CE").onclick = function() {
-        
-}
-
-document.getElementById("clean").onclick = function() {
-    document.getElementById("display_num").innerHTML = 0;
-}
-
-document.getElementById("back").onclick = function() {
-    document.getElementById("display_num").innerHTML = Math.floor(document.getElementById("display_num").innerHTML/10);
-}
-
-
-
-// operator
-document.getElementById("equal").onclick = function() {
-        
-}
-

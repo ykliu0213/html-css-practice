@@ -18,7 +18,17 @@ html, body {
 
 body {
 
-    background-color: rgb(198, 198, 198);
+    background-color: #c2ddd8;
+
+}
+
+h1 {
+
+    color: #fffef2;
+    font-family: Megrim, Impact, sans-serif;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 50px;
 
 }
 
@@ -29,7 +39,8 @@ body {
     background-color: rgb(233, 233, 233);
     margin-left: auto;
     margin-right: auto;
-    margin-top: 100px;
+    border-radius: 12px;
+    box-shadow: 5px 5px 5px #d3cdcd;
 
 }
 
@@ -37,42 +48,29 @@ body {
 
     width: 350px;
     height: 50px;
-    border: solid 2px #555;
+    /* border: solid 2px #555; */
     margin-left: auto;
     margin-right: auto;
     top: 25px;
-
-}
-
-#cal {
-
-    height: 100%;
-    width: 60px;
-    background-color: rgb(233, 233, 233);
-    float: left;
-    border-right: solid 2px #555;
-}
-
-#operator {
-
-    font-size: 45px;
-    margin: 0;
-    text-align: center;
-    color: #777;
+    border-radius: 10px;
 
 }
 
 #display_screen {
 
     height: 100%;
-    width: 288px;
+    width: 350px;
     background-color: rgb(233, 233, 233);
     float: right;
+    border-radius: 10px;
 
 }
 
 #display_num {
     
+    width: 98%;
+    border-radius: 10px;
+
     font-size: 45px;
     margin: 0;
     text-align: right;
@@ -83,7 +81,6 @@ body {
 
     width: 350px;
     height: 350px;
-    border: solid 2px #111;
     margin-left: auto;
     margin-right: auto;
     top: 55px;
@@ -103,10 +100,21 @@ body {
     height: 100%;
     padding: 10px;
     margin: 0 3px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    background-color: rgb(198, 198, 198);
+    box-shadow: 0 2px #888;
 
 }
 
-#zero{
+.btn:hover {
+
+    background-color: #999;
+
+}
+
+#zero {
 
     width: 47.5%;
     height: 100%;
@@ -115,5 +123,12 @@ body {
 
 }
 
+#clean {
 
+    width: 47.5%;
+    height: 100%;
+    padding: 10px;
+    margin: 0 3px;
+
+}
 

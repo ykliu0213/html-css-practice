@@ -5,49 +5,47 @@
     <title>Calculator</title>
 
     <meta charset="utf-8" />
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css">  
     
 </head>
 
 <body>
+    <h1>Calculator</h1>
 <div class="calculator">
     <div class="display_area">
-        <div id="cal">
-            <p id="operator">+</p>
-        </div>
         <div id="display_screen">
-            <p id="display_num">0</p>
+            <input type="text" id="display_num" readonly>
         </div>
     </div>
     <div class="btn_area">
         <div class="btn_row">
-            <button class="btn" id="clean_CE">CE</button>
-            <button class="btn" id="clean">C</button>
-            <button class="btn" id="back">←</button>
-            <button class="btn" id="divide">/</button>
+            <button class="btn" id="clean" onclick="clearRes()">C</button>
+            <button class="btn"  onclick="del()">←</button>
+            <button class="btn"  onclick="cal('/')">/</button>
         </div>
         <div class="btn_row">
-            <button class="btn" id="nine">9</button>
-            <button class="btn" id="eight">8</button>
-            <button class="btn" id="seven">7</button>
-            <button class="btn" id="multiply">*</button>
+            <button class="btn" onclick="getNum('9')">9</button>
+            <button class="btn" onclick="getNum('8')">8</button>
+            <button class="btn" onclick="getNum('7')">7</button>
+            <button class="btn" onclick="cal('*')">*</button>
         </div>
         <div class="btn_row">
-            <button class="btn" id="six">6</button>
-            <button class="btn" id="five">5</button>
-            <button class="btn" id="four">4</button>
-            <button class="btn" id="minus">-</button>
+            <button class="btn" onclick="getNum('6')">6</button>
+            <button class="btn" onclick="getNum('5')">5</button>
+            <button class="btn" onclick="getNum('4')">4</button>
+            <button class="btn" onclick="cal('-')">-</button>
         </div>
         <div class="btn_row">
-            <button class="btn" id="three">3</button>
-            <button class="btn" id="two">2</button>
-            <button class="btn" id="one">1</button>
-            <button class="btn" id="plus">+</button>
+            <button class="btn" onclick="getNum('3')">3</button>
+            <button class="btn" onclick="getNum('2')">2</button>
+            <button class="btn" onclick="getNum('1')">1</button>
+            <button class="btn" onclick="cal('+')">+</button>
         </div>    
         <div class="btn_row">
-            <button class="btn" id="zero">0</button>
-            <button class="btn" id="point">.</button>
-            <button class="btn" id="equal">=</button>
+            <button class="btn" id="zero" onclick="getNum('0')">0</button>
+            <button class="btn" onclick="cal('.')">.</button>
+            <button class="btn" onclick="equal()">=</button>
         </div>
     </div>
 </div>
