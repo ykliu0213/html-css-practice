@@ -18,25 +18,54 @@ html , body {
 
 body {
 
-    background-color: #c2ddd8;
+    /* background: url("../img/bg.jpg") center fixed; */
+    background-size: 700px;
+    background-color: #984d06;
+
+}
+
+h1 {
+
+    text-align: center;
+    font-size: 40px;
+    color: azure;
+    font-family: 微軟正黑體;
 
 }
 
 .main_area {
 
+    width: 360px;
+    height: 150px;
     margin: 40px;
+    padding: 5px 0 0 20px;
+    margin-left: auto;
+    margin-right: auto;
+    top: 250px; 
 
 }
 
 #answer {
 
+    width: 280px;
     text-align: right;
     border-radius: 10px;
+    font-family: 微軟正黑體;
 
 }
 
 #guess_btn {
 
     border-radius: 10px;
+    font-family: 微軟正黑體;
+
+}
+
+#prompt {
+
+    font-size: 25px;
+    text-align: center;
+    font-family: 微軟正黑體;
+    color: azure;
 
 }
