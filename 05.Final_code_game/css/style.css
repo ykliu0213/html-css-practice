@@ -1,0 +1,42 @@
+
+* {
+
+    font-size: 22px;
+    position: relative;
+
+}
+
+html , body {
+    
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+
+}
+
+body {
+
+    background-color: #c2ddd8;
+
+}
+
+.main_area {
+
+    margin: 40px;
+
+}
+
+#answer {
+
+    text-align: right;
+    border-radius: 10px;
+
+}
+
+#guess_btn {
+
+    border-radius: 10px;
+
+}
