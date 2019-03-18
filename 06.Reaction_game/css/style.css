@@ -1,0 +1,23 @@
+
+body {
+    
+    background-color: rgba(255, 94, 100, 0.5);
+    color: #FF3864;
+
+}
+
+.bold {
+
+    font-weight: bold;
+
+}
+
+#box {
+
+    width: 140px;
+    height: 140px;
+    background-color: red;
+    display: none;
+    position: relative;
+
+}
