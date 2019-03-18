@@ -1,8 +1,10 @@
 
+// 計時用變數
 var createdTime;
 var clickedTime;
 var reactionTime;
 
+// 隨機生成顏色
 function getRandomColor() {
     
     var max = 200;
@@ -16,23 +18,33 @@ function getRandomColor() {
 
 }
 
-
 function makeBox() {
 
     var time = Math.random() * 2000;
 
     setTimeout(function() {
 
+        // 隨機生成圓或方形
         if(Math.random() >= 0.5) {
             document.getElementById('box').style.borderRadius = "70px";
         }else{
             document.getElementById('box').style.borderRadius = "0";
         }
 
+        // 根據視窗大小調整box大小;
+        var dynamicBound;
+        if(window.innerWidth > window.innerHeight){
+            dynamicBound = window.innerWidth / 8;
+        }else{
+            dynamicBound = window.innerHeight / 8;
+        }
+        dynamicBound = dynamicBound + "px";
+        document.documentElement.style.setProperty("--bound" , dynamicBound);
+
+        // 隨機生成位置
         var min = 0;
         var max = window.innerHeight - 280;
         var top = Math.floor(Math.random() * (max - min + 1) + min);
-
         min = 0;
         max = window.innerWidth - 140;
         var left = Math.floor(Math.random() * (max - min + 1) + min);
@@ -47,6 +59,7 @@ function makeBox() {
 
 }
 
+// 點擊後結算時間並重新計時
 document.getElementById("box").onclick = function() {
 
     this.style.display = "none";
