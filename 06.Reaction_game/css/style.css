@@ -1,4 +1,10 @@
 
+:root {
+
+    --bound: 140px;
+
+}
+
 body {
     
     background-color: rgba(255, 94, 100, 0.5);
@@ -14,8 +20,8 @@ body {
 
 #box {
 
-    width: 140px;
-    height: 140px;
+    width: var(--bound);
+    height: var(--bound);
     background-color: red;
     display: none;
     position: relative;
