@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <title>Online Web Editor</title>
+
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+</head>
+
+<body>
+
+    <div id="menu">
+        <div class="menu-container">
+            <div id="logo">
+                Simple Web Editor
+            </div>
+
+            <button id="runCode" class="button" type="button"><span>運行代碼 </span></button>
+        </div>
+    </div>
+
+    <div class="clear"></div>
+
+    <ul id="accordion">
+        <h3 id="html-code" class="tab">HTML</h3>
+        <div class="code-container">
+            <textarea id="html-code">
+
+            </textarea>
+        </div>
+
+        <h3 id="css-code" class="tab">CSS</h3>
+        <div class="code-container">
+            <textarea id="css-code">
+                
+            </textarea>
+        </div>
+
+        <h3 id="js-code" class="tab">JavaScript</h3>
+        <div class="code-container">
+            <textarea id="js-code">
+                
+            </textarea>
+        </div>
+    </ul>
+
+    <div class="clear"></div>
+
+    <div id="result-container">
+
+        <h2>結 果</h2>
+        <iframe id="result-frame"></iframe>
+    </div>
+
+    <div class="footer"></div>
+
+<script type="text/javascript" src="js/script.js"></script>
+
+</body>
+</html>
