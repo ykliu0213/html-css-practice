@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <title>validation Form</title>
+
+    <meta charset="utf-8" />
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">  
+    
+</head>
+
+<body>
+
+    <div id="container">
+        <form id="validationForm">
+            <label for="email-name">姓 名</label>
+            <input id="email-name" class="input-style input-width" type="text" name="name" placeholder="請輸入您的姓名">
+
+            <label for="email-address">電子郵箱</label>
+            <input id="email-address" class="input-style input-width" type="text" name="email" placeholder="請輸入您的郵箱">
+
+            <label for="email-gender">性別</label>
+            <select id="email-gender" class="input-style" name="gender">
+                <option value="male">男性</option>
+                <option value="female">女性</option>
+            </select>
+
+            <label for="password1">密碼</label>
+            <input id="password1" class="input-style input-width" type="password" name="password1" placeholder="密 碼">
+
+            <label for="password2">確認密碼</label>
+            <input id="password2" class="input-style input-width" type="password" name="password2" placeholder="確認密碼">
+
+            <textarea id="email-message" class="input-style" name="message" rows="8" cols="80" placeholder="請描述您的狀況"></textarea>
+
+            <button id="submitButton" class="input-style" type="submit" name="submit">發送郵件</button>
+
+        </form>
+
+        <div id="error">
+
+        </div>
+    </div>
+
+<script type="text/javascript" src="js/script.js"></script>
+
+</body>
+</html>

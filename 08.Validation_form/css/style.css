@@ -1,0 +1,71 @@
+
+body {
+
+    background-color: #F2F3F5;
+
+}
+
+#container {
+
+    padding-top: 60px;
+    width: 600px;
+    margin: auto;
+    font-family: "Helvetica Neue" , "Helvetica" , "Arial"; 
+    
+}
+
+.input-style {
+
+border-radius: 5px;
+border: 1px solid grey;
+font-size: 1.1em;
+padding-left: 20px;
+margin-bottom: 10px;
+    
+}
+
+.input-width {
+
+    width: 300px;
+    height: 40px;
+
+}
+
+#email-gender {
+
+    width: 323px;
+    height: 40px;
+    
+}
+
+#email-message {
+
+    width: 500px;
+    padding-top: 15px;
+
+}
+
+#submitButton {
+
+    background-color: orange;
+    color: white;
+    width: 523px;
+    height: 40px;
+
+}
+
+#error {
+
+    color: red;
+    
+}
+
+label {
+
+    width: 200px;
+    float: left;
+    font-size: 1.2em;
+    padding-top: 8px; 
+
+}
+
