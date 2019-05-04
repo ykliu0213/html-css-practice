@@ -32,6 +32,6 @@
 > `Html` `Css` `JS` `JQuery`  
 > Demo : [08.Validation_form](https://ykliu0213.github.io/html-css-practice/08.Validation_form/index.html)
 
-### Calculator
+### Online_web_editor
 > `Html` `Css` `JS` `JQuery`  
 > Demo : [09.Online_web_editor](https://ykliu0213.github.io/html-css-practice/09.Online_web_editor/index.html)
